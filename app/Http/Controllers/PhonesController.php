@@ -62,7 +62,7 @@ class PhonesController extends Controller
             $phones->memory_limit = $request ->input('memory_limit');
             $phones->save();
             return response()->json([
-                "message" => "Запись успешна добавлена"
+                "message" => "Record has been added"
             ], 200);
         }
     }
@@ -111,12 +111,12 @@ class PhonesController extends Controller
 
 
             return response()->json([
-                "message" => "Запись успешно обновлена"
+                "message" => "Record has been updated"
             ], 200);
         }
         else{
             return response()->json([
-                "message" => "Запись не найдена"
+                "message" => "Record not found"
             ], 404);
         }
     }
@@ -134,11 +134,11 @@ class PhonesController extends Controller
             $phones->delete();
 
             return response()->json([
-                "message" => "Запись успешна удалена"
+                "message" => "Record deleted"
             ], 202);
         } else {
             return response()->json([
-                "message" => "Запись была удалена , или не существует"
+                "message" => "Record was deleted or missing"
             ], 404);
         }
     }
