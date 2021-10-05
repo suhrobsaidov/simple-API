@@ -18,6 +18,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/phone','PhonesController@index');
+Route::get('/phone/filter','PhonesController@filter');
 Route::put('/phone/store','PhonesController@store');
 Route::delete('/phone/delete/{id}','PhonesController@destroy');
 Route::put('/phone/update/{id}' , 'PhonesController@update');

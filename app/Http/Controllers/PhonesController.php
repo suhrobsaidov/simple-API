@@ -142,4 +142,17 @@ class PhonesController extends Controller
             ], 404);
         }
     }
+    public function filter(Request $request)
+    {
+
+        $filter = $request->input('brand');
+        if(Phones::where('brand', $filter)->exists()) {
+            return Phones::all()->where('brand','=',$filter);
+        } else {
+            return response()->json([
+                "message" => "Record was deleted or missing"
+            ], 404);
+        }
+
+    }
 }
