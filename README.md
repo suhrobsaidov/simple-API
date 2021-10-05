@@ -1,7 +1,7 @@
 1. git clone https://github.com/suhrobsaidov/simple-API .
 2. cd simple-API .
-3. Запустите composer install.
-4. Пропишите данные доступа к Базе данных в файле .env.
+3. Пропишите данные доступа к Базе данных в файле .env.
+4. Запустите composer install.
 5. php artisan key:generate.
 6. Запускаем php artisan serve .
    После установки вы можете получить доступ к http: // localhost: 8000 в своем браузере.
@@ -55,6 +55,17 @@
     "message": "Запись была удалена , или не существует"<br>
     }<br>
     с кодом 404<br>
+14. `Фильтры(get)`<br>
+    пример запроса<br>
+    127.0.0.1:8000/api/phone/filter?brand=(Название бренда)<br>
+    ответ с кодом 200 ОК <br>
+    при неправильном вводе названии бредна<br>
+    будет следующая запись:<br>
+    {<br>
+    "message": "Record was deleted or missing"<br>
+    }<br>
+    c кодом 404 (Not found)<br>
+    
 
    
 
